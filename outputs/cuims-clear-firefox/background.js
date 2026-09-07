@@ -3,6 +3,8 @@
 // core, and traineddata are loaded from extension resources, so no network
 // request ever leaves the browser.
 
+importScripts("vendor/tesseract/tesseract.min.js");
+
 const OEM_LSTM_ONLY = 1;
 const SOLVE_TIMEOUT_MS = 25_000;
 
