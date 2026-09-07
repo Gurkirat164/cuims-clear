@@ -10,10 +10,10 @@
   "permissions": ["storage"],
   "host_permissions": ["https://students.cuchd.in/*"],
   "background": {
-    "scripts": ["vendor/tesseract/tesseract.min.js", "background.js"]
+    "service_worker": "background.js"
   },
   "content_security_policy": {
-    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; upgrade-insecure-requests"
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
   },
   "action": {
     "default_title": "CUIMS Clear",
@@ -26,14 +26,5 @@
       "js": ["content.js"],
       "run_at": "document_start"
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "cuims-clear@arshgill01",
-      "strict_min_version": "142.0",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
-    }
-  }
+  ]
 }
